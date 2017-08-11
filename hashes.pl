@@ -7,7 +7,13 @@ my @test_values = values(%test_hash);
 print("Keys: @test_keys\n");
 print("Values: @test_values\n");
 
-while((my $key, my $value) = each %test_hash)
+#while((my $key, my $value) = each %test_hash)
+#{
+#	print("$key => $value\n");
+#}
+
+foreach my $key (sort(keys(%test_hash)))
 {
+	my $value = $test_hash{$key};
 	print("$key => $value\n");
 }
